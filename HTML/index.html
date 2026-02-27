@@ -1,18 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- 🧠 HOW IT WORKS: These meta tags help the browser understand text characters 
          and ensure your game scales properly on mobile screens! -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- 📝 TODO: Give your game an epic title! This shows up in the browser tab. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- 📝 TODO: Give your game a fun title! This shows up in the browser tab. -->
     <title>MY AWESOME CLICKER GAME</title>
 
-    <!-- 📝 TODO: Don't forget to link your CSS style file here so your game looks good! -->
+    <!-- 📝 TODO: When you get to CSS, link your stylesheet here. -->
     <!-- Example: <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <!-- 📝 TODO: When you get to JS, link your script here. -->
+    <!-- Example: <script src="script.js" defer></script> -->
   </head>
-  
+
   <body>
     <!-- =========================================
          🎮 LEFT COLUMN: THE GAME ZONE 🎮
@@ -20,7 +24,6 @@
     <!-- 🧠 HOW IT WORKS: The 'class' acts like a nametag for your CSS. 
          Our CSS looks for "game-zone" to know where to apply your styles! -->
     <div class="game-zone">
-      
       <!-- 📝 TODO: Change this heading to whatever fits your game's theme! -->
       <h2>START CLICKING!</h2>
 
@@ -28,7 +31,7 @@
            JS will look specifically for id="score" so it knows where to update the math! -->
       <!-- ⚠️ IMPORTANT: Do NOT change the IDs in this file, or your JS will lose track of them! -->
       <h1 id="score">0</h1>
-      
+
       <!-- 📝 TODO: What are you collecting? (Points, Cookies, Gold, Energy?) -->
       <p>Points Generated</p>
 
@@ -39,12 +42,10 @@
       <button id="click-btn">CLICK ME</button>
     </div>
 
-
     <!-- =========================================
          🛒 RIGHT COLUMN: THE SHOP ZONE 🛒
          ========================================= -->
     <div class="shop-zone">
-      
       <!-- 📝 TODO: Name your shop! -->
       <h2>THE SHOP</h2>
 
@@ -54,7 +55,7 @@
       <!-- SHOP ITEM 1 -->
       <button class="buy-btn" id="btn-auto1">
         <span class="count" id="count-auto1"></span>
-        <!-- 📝 TODO: Name your first upgrade! (e.g., Grandma, Helper, Robot) -->
+        <!-- 📝 TODO: Name your first auto clicker! (e.g., Grandma, Helper, Robot) -->
         <span>Auto Clicker 1 (+1/sec)</span>
         <span class="cost-text" id="cost-auto1"></span>
       </button>
@@ -62,7 +63,7 @@
       <!-- SHOP ITEM 2 -->
       <button class="buy-btn" id="btn-auto2">
         <span class="count" id="count-auto2"></span>
-        <!-- 📝 TODO: Name your second upgrade! -->
+        <!-- 📝 TODO: Name your second auto clicker! -->
         <span>Auto Clicker 2 (+5/sec)</span>
         <span class="cost-text" id="cost-auto2"></span>
       </button>
@@ -70,14 +71,11 @@
       <!-- SHOP ITEM 3 -->
       <button class="buy-btn" id="btn-hamster">
         <span class="count" id="count-hamster"></span>
-        <!-- 📝 TODO: Name your third upgrade! -->
+        <!-- 📝 TODO: Name your third auto clicker! -->
         <span>Auto Clicker 3 (+10/sec)</span>
         <span class="cost-text" id="cost-hamster"></span>
       </button>
-
-    </div> <!-- End of Shop Zone -->
-
-    <!-- 📝 TODO: Link your JavaScript file here at the very bottom so your buttons actually work! -->
-    <!-- Example: <script src="script.js"></script> -->
+    </div>
+    <!-- End of Shop Zone -->
   </body>
 </html>
