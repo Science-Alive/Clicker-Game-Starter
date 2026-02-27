@@ -1,0 +1,113 @@
+/* =========================================
+   🎮 AUTO CLICKER GAME: DESIGN & STYLE (CSS) 🎮
+   ========================================= */
+
+/* --- MAIN PAGE SETUP --- */
+body {   
+  /* 📝 TODO: Pick your background and text colors! */
+  background-color: /* Add a dark hex code here, e.g., #222 */;   
+  color: /* Add a light text color here, e.g., #fff */;   
+  font-family: /* Pick a font, e.g., "Verdana", sans-serif */;   
+  
+  /* 🧠 HOW IT WORKS: The next 3 lines create a side-by-side (2-column) layout! */
+  margin: 0;   
+  display: flex; /* "flex" puts the game zone and shop zone next to each other */
+  height: 100vh; /* "100vh" means it takes up 100% of the screen height */
+}  
+
+/* --- LEFT SIDE: The Game Zone --- */
+.game-zone {   
+  /* 🧠 HOW IT WORKS: flex: 1 makes this take up exactly half (50%) of the screen.
+     The other flex settings perfectly center whatever is inside this zone. */
+  flex: 1; 
+  display: flex;   
+  flex-direction: column;   
+  align-items: center;   
+  justify-content: center;   
+  
+  /* 📝 TODO: Add a border to separate the game from the shop! */
+  border-right: /* e.g., 5px solid #444 */; 
+}  
+
+/* --- RIGHT SIDE: The Shop --- */
+.shop-zone {   
+  /* 🧠 HOW IT WORKS: flex: 1 makes the shop take up the other 50% of the screen.
+     overflow-y allows you to scroll down if you add lots of items to the shop. */
+  flex: 1; 
+  overflow-y: auto; 
+  
+  /* 📝 TODO: Give your shop a background color and some padding (inside spacing) */
+  background-color: /* e.g., #333 */;   
+  padding: /* e.g., 20px */;   
+}  
+
+/* --- TEXT & HEADINGS --- */
+h1 {   
+  /* 📝 TODO: Make the main score huge and colorful! */
+  margin: 0;   
+  font-size: /* e.g., 50px */;   
+  color: /* e.g., #ffd700 or gold */; 
+} 
+
+h2 {   
+  /* 📝 TODO: Style your secondary headings (like "Upgrades") */
+  color: /* e.g., #aaa */;   
+  margin-bottom: 30px; 
+}  
+
+/* --- THE MAIN CLICKER BUTTON --- */
+#click-btn {   
+  /* 🧠 HOW IT WORKS: cursor: pointer changes the mouse to a pointing hand 
+     so players know they can click it! */
+  cursor: pointer; 
+  
+  /* 📝 TODO: Add your custom image and give it a width and height! */
+  background-image: url("assets/Wattson.svg"); /* Change this to your image file! */
+  background-position: center;   
+  background-size: cover;   
+  width: /* e.g., 200px */;   
+  height: /* e.g., 200px */;   
+  
+  /* 📝 TODO: Make the image perfectly round by adding a border-radius */
+  border-radius: /* e.g., 50% or 128px */;   
+}  
+
+/* 🧠 HOW IT WORKS: :active tells the button what to do EXACTLY when being clicked.
+   transform: scale(0.9) shrinks it to 90% size, making it look squished! */
+#click-btn:active {   
+  transform: scale(0.9); 
+}  
+
+/* --- SHOP BUTTONS --- */
+.buy-btn {   
+  /* 🧠 HOW IT WORKS: This flex layout pushes the item name to the left 
+     and the price to the right, keeping things neat! */
+  display: flex;   
+  justify-content: space-between;   
+  align-items: center;   
+  width: 100%; 
+  border: none;
+  cursor: pointer;
+  
+  /* 📝 TODO: Style your shop buttons! Change colors, padding, and round the corners */
+  background-color: /* e.g., #444 */;   
+  color: /* e.g., white */;   
+  padding: /* e.g., 15px */;   
+  margin-bottom: 10px;   
+  border-radius: /* e.g., 8px */;   
+  font-size: 16px;   
+  
+  /* Smooth transition for when we hover over it */
+  transition: background 0.2s; 
+}  
+
+/* 📝 TODO: What should the shop button look like when the mouse hovers over it? */
+.buy-btn:hover {   
+  background-color: /* Choose a slightly brighter color, e.g., #555 */; 
+}  
+
+/* 📝 TODO: Style the cost text so it stands out from the rest of the button */
+.cost-text {   
+  color: /* Make it pop, e.g., #ffd700 */;   
+  font-weight: /* e.g., bold */; 
+}
