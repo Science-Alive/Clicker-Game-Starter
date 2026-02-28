@@ -29,7 +29,7 @@ const gameData = {
       count: 0,
     },
     {
-      id: "hamster",
+      id: "auto3",
       cost: 250,
       rate: 10,
       count: 0,
@@ -45,18 +45,12 @@ const gameData = {
 function main() {
   console.log("Game Starting...");
 
-  // 📝 TODO: Step 1 - Call your loadGame() function to check if the player has played before!
-
-  // 📝 TODO: Step 2 - Find your main click button in the HTML using document.getElementById.
+  // 📝 TODO: Step 1 - Find your main click button in the HTML using document.getElementById.
   // Then, add an event listener so that when it is clicked, it adds 'clickPower' to your 'score'!
-  // Don't forget to call updateUI() afterward so the screen changes!
 
-  // 📝 TODO: Step 3 - Loop through your 'gameData.autoClickers' array.
+  // 📝 TODO: Step 2 - Loop through your 'gameData.autoClickers' array.
   // For each item, find its button in the HTML and add a click event listener.
   // When clicked, it should run the buyAutoClicker() function for that specific item.
-
-  // 📝 TODO: Step 4 - Set up an auto-save timer using setInterval().
-  // Make it run your saveGame() function every 15 seconds (15000 milliseconds).
 
   // 🧠 HOW IT WORKS: This starts the game loop engine! We left this here so your passive points run smoothly.
   gameData.lastTick = Date.now();
@@ -87,16 +81,18 @@ function gameLoop() {
 /* =========================================
    🛠️ 4. HELPER FUNCTIONS
    ========================================= */
+
+// Determines whether player has enough points to buy an auto clicker
 function buyAutoClicker(autoClicker) {
-  // 📝 TODO: Write the logic to buy an item from the shop! Follow these steps:
-  // Step 1: Write an IF statement to check if 'gameData.score' is greater than or equal to 'autoClicker.cost'.
-  // Step 2: Inside the IF statement, subtract the cost from your score.
-  // Step 3: Add 1 to the 'autoClicker.count' so the game knows you own it.
-  // Step 4: Make the item more expensive for next time!
-  // Hint: autoClicker.cost = Math.ceil(autoClicker.cost * 1.2);
-  // Step 5: Outside the IF statement, call updateUI() to refresh the screen.
+  // 🧠 HOW IT WORKS: Uses if statement to determine if an auto clicker can be bought.
+  if (gameData.score >= autoClicker.cost) {
+    gameData.score -= autoClicker.cost;
+    autoClicker.count++;
+    autoClicker.cost = Math.ceil(autoClicker.cost * 1.2);
+  }
 }
 
+// Calculates the point per second to show player how many points auto clickers are earning
 function calculatePPS() {
   let pps = 0;
   // Look at every auto clicker we own, and multiply how many we have by how much they give!
